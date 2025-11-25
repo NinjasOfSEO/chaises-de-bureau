@@ -1,0 +1,70 @@
+IMAGES PLACEHOLDER - À REMPLACER
+
+Ce dossier doit contenir les images suivantes pour que le site fonctionne correctement :
+
+IMAGES PRINCIPALES (400x300px recommandé) :
+- chaise-ergonomique-1.jpg
+- chaise-bureau-confortable.jpg  
+- chaise-gaming.jpg
+- fauteuil-direction.jpg
+
+IMAGES CHAISES ERGONOMIQUES :
+- chaise-ergo-1.jpg
+- chaise-ergo-2.jpg
+- chaise-ergo-premium.jpg
+- chaise-ergo-budget.jpg
+- chaise-ergo-dos.jpg
+- chaise-ergo-maille.jpg
+- chaise-ergo-design.jpg
+
+IMAGES CHAISES GAMING :
+- chaise-gaming-1.jpg
+- chaise-gaming-budget.jpg
+- chaise-gaming-premium.jpg
+- chaise-gaming-milieu.jpg
+- chaise-gaming-tissu.jpg
+- chaise-gaming-sieste.jpg
+
+IMAGES COMPARATIFS :
+- chaise-numero-1.jpg
+- chaise-numero-2.jpg
+- chaise-gaming-top.jpg
+- chaise-budget.jpg
+- fauteuil-direction-top.jpg
+- ergomax-pro-test.jpg
+- comfortdesk-ergo-test.jpg
+- ergolux-executive-test.jpg
+
+IMAGES CHAISES PAS CHER :
+- chaise-pas-cher-1.jpg
+- chaise-ultra-budget.jpg
+- chaise-etudiant.jpg
+- chaise-ergo-budget.jpg
+- chaise-maille-budget.jpg
+- chaise-premium-budget.jpg
+
+IMAGES BUREAUX ASSIS-DEBOUT :
+- bureau-electrique-1.jpg
+- bureau-manuel-1.jpg
+- convertisseur-bureau.jpg
+- bureau-electrique-budget.jpg
+- bureau-premium.jpg
+- convertisseur-simple.jpg
+
+RECOMMANDATIONS :
+- Format : JPG ou WebP
+- Taille : 400x300px pour les cartes produit
+- Poids : < 100KB par image
+- Alt-text : déjà optimisés dans le HTML
+- Noms de fichiers : respecter exactement les noms ci-dessus
+
+SOURCES SUGGÉRÉES :
+- Photos produits Amazon (avec permission)
+- Banques d'images libres (Unsplash, Pexels)
+- Photos prises par vos soins
+- Images fournisseurs (avec accord)
+
+ATTENTION :
+- Vérifier les droits d'utilisation
+- Optimiser pour le web
+- Tester sur mobile et desktop

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>🚀 Test Local - chaises-de-bureau.be</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { 
+      font-family: system-ui, sans-serif; 
+      max-width: 800px; 
+      margin: 2rem auto; 
+      padding: 0 1rem;
+      line-height: 1.6;
+    }
+    h1 { color: #0072ce; }
+    .page-list { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .page-card {
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 1rem;
+      background: #f9f9f9;
+    }
+    .page-card h3 { margin-top: 0; color: #1f2933; }
+    .page-card a { 
+      color: #0072ce; 
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .page-card a:hover { text-decoration: underline; }
+    .status { 
+      display: inline-block;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+    .status.ready { background: #d4edda; color: #155724; }
+    .status.images { background: #fff3cd; color: #856404; }
+    .note {
+      background: #e7f3ff;
+      border-left: 4px solid #0072ce;
+      padding: 1rem;
+      margin: 2rem 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>🚀 chaises-de-bureau.be - Test Local</h1>
+  
+  <div class="note">
+    <strong>✅ URLs Restructurées :</strong> Toutes les pages sont maintenant à la racine avec des noms descriptifs (ex: <code>chaises-ergonomiques.html</code> au lieu de <code>/chaises/ergonomiques/index.html</code>). 
+    Les images sont en placeholder - voir <code>assets/images/placeholder-info.txt</code> pour les remplacer.
+  </div>
+
+  <h2>📄 Pages principales</h2>
+  <div class="page-list">
+    <div class="page-card">
+      <h3>🏠 Accueil</h3>
+      <span class="status ready">✅ Prêt</span>
+      <p>Page d'accueil avec hero, 3 chemins, sélection produits, guides et FAQ.</p>
+      <a href="index.html">→ Voir la page</a>
+    </div>
+
+    <div class="page-card">
+      <h3>🪑 Hub Chaises</h3>
+      <span class="status ready">✅ Prêt</span>
+      <p>Page hub générale avec catégories et top 5 des meilleures chaises.</p>
+      <a href="chaises-de-bureau.html">→ Voir la page</a>
+    </div>
+
+    <div class="page-card">
+      <h3>🏥 Chaises Ergonomiques</h3>
+      <span class="status ready">✅ Prêt</span>
+      <p>Sélection de 7 chaises ergonomiques avec guide complet et FAQ.</p>
+      <a href="chaises-ergonomiques.html">→ Voir la page</a>
+    </div>
+
+    <div class="page-card">
+      <h3>🎮 Chaises Gaming</h3>
+      <span class="status ready">✅ Prêt</span>
+      <p>Top 6 chaises gaming avec guide d'achat et comparaison vs bureau.</p>
+      <a href="chaises-gaming.html">→ Voir la page</a>
+    </div>
+
+    <div class="page-card">
+      <h3>💰 Chaises Pas Cher</h3>
+      <span class="status ready">✅ Prêt</span>
+      <p>Sélection de 6 chaises abordables avec conseils budget serré.</p>
+      <a href="chaises-pas-cher.html">→ Voir la page</a>
+    </div>
+
+    <div class="page-card">
+      <h3>⬆️ Bureaux Assis-Debout</h3>
+      <span class="status ready">✅ Prêt</span>
+      <p>Guide complet des bureaux réglables avec sélection produits.</p>
+      <a href="bureaux-assis-debout.html">→ Voir la page</a>
+    </div>
+  </div>
+
+  <h2>📊 Comparatifs</h2>
+  <div class="page-list">
+    <div class="page-card">
+      <h3>🏆 Hub Comparatifs</h3>
+      <span class="status ready">✅ Prêt</span>
+      <p>Page d'accueil des comparatifs avec méthodologie de test.</p>
+      <a href="comparatifs.html">→ Voir la page</a>
+    </div>
+
+    <div class="page-card">
+      <h3>🥇 Top 10 Meilleures Chaises</h3>
+      <span class="status ready">✅ Prêt</span>
+      <p>Classement complet avec tests détaillés et tableau comparatif.</p>
+      <a href="meilleures-chaises-de-bureau.html">→ Voir la page</a>
+    </div>
+  </div>
+
+  <h2>📚 Guides d'achat</h2>
+  <div class="page-list">
+    <div class="page-card">
+      <h3>📋 Hub Guides</h3>
+      <span class="status ready">✅ Prêt</span>
+      <p>Page d'accueil des guides avec conseils rapides et checklist.</p>
+      <a href="guides-achat.html">→ Voir la page</a>
+    </div>
+
+    <div class="page-card">
+      <h3>🎯 Comment Choisir</h3>
+      <span class="status ready">✅ Prêt</span>
+      <p>Guide complet de 3000+ mots avec tous les critères détaillés.</p>
+      <a href="comment-choisir-chaise-de-bureau.html">→ Voir la page</a>
+    </div>
+  </div>
+
+  <h2>⚖️ Pages légales</h2>
+  <div class="page-list">
+    <div class="page-card">
+      <h3>ℹ️ À propos</h3>
+      <span class="status ready">✅ Prêt</span>
+      <p>Présentation de l'équipe, mission, méthode de test et transparence.</p>
+      <a href="a-propos.html">→ Voir la page</a>
+    </div>
+
+    <div class="page-card">
+      <h3>📜 Mentions légales</h3>
+      <span class="status ready">✅ Prêt</span>
+      <p>Mentions légales complètes avec RGPD et affiliation Amazon.</p>
+      <a href="mentions-legales.html">→ Voir la page</a>
+    </div>
+  </div>
+
+  <h2>🔧 Fichiers techniques</h2>
+  <div class="page-list">
+    <div class="page-card">
+      <h3>🤖 Robots.txt</h3>
+      <span class="status ready">✅ Prêt</span>
+      <p>Configuration pour les moteurs de recherche.</p>
+      <a href="robots.txt">→ Voir le fichier</a>
+    </div>
+
+    <div class="page-card">
+      <h3>🗺️ Sitemap.xml</h3>
+      <span class="status ready">✅ Prêt</span>
+      <p>Plan du site pour l'indexation SEO.</p>
+      <a href="sitemap.xml">→ Voir le fichier</a>
+    </div>
+
+    <div class="page-card">
+      <h3>📖 README.md</h3>
+      <span class="status ready">✅ Prêt</span>
+      <p>Documentation complète du projet.</p>
+      <a href="README.md">→ Voir la doc</a>
+    </div>
+  </div>
+
+  <h2>✅ Checklist de déploiement</h2>
+  <ul>
+    <li>✅ Structure HTML sémantique</li>
+    <li>✅ CSS responsive et optimisé</li>
+    <li>✅ JavaScript fonctionnel (menu, FAQ, filtres)</li>
+    <li>✅ SEO optimisé (titles, meta, schema.org)</li>
+    <li>✅ Liens d'affiliation Amazon configurés</li>
+    <li>✅ Pages légales conformes</li>
+    <li>✅ Sitemap et robots.txt</li>
+    <li>⚠️ Images à remplacer (voir placeholder-info.txt)</li>
+    <li>⚠️ Liens Amazon à actualiser avec vrais produits</li>
+    <li>⚠️ Informations légales à personnaliser</li>
+  </ul>
+
+  <h2>🚀 Prochaines étapes</h2>
+  <ol>
+    <li><strong>Remplacer les images</strong> - Voir assets/images/placeholder-info.txt</li>
+    <li><strong>Configurer les liens Amazon</strong> - Remplacer les "#" par de vrais liens</li>
+    <li><strong>Personnaliser les mentions légales</strong> - Ajouter vos vraies informations</li>
+    <li><strong>Tester sur mobile</strong> - Vérifier la responsivité</li>
+    <li><strong>Optimiser les performances</strong> - Compresser images et CSS</li>
+    <li><strong>Déployer en ligne</strong> - Upload sur serveur avec SSL</li>
+    <li><strong>Configurer Google Analytics</strong> - Tracking des performances</li>
+    <li><strong>Soumettre à Google Search Console</strong> - Indexation SEO</li>
+  </ol>
+
+  <div class="note">
+    <strong>🎉 Félicitations !</strong> Votre MVP chaises-de-bureau.be est prêt ! 
+    Le site contient ~15 pages optimisées SEO avec un contenu de qualité et une structure évolutive.
+  </div>
+
+</body>
+</html>
