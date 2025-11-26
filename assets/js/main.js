@@ -42,47 +42,73 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Simple product filters (basic implementation)
-  const filtersForm = document.querySelector('#filters-form');
-  if (filtersForm) {
-    filtersForm.addEventListener('change', () => {
+  // Filtres produits améliorés avec compteur
+  function initFilters() {
+    const filtersForm = document.getElementById('filters-form');
+    if (!filtersForm) return;
+
+    const productCards = document.querySelectorAll('.product-card');
+    
+    // Créer le compteur de résultats
+    const resultsCounter = document.createElement('div');
+    resultsCounter.className = 'filters__results';
+    resultsCounter.innerHTML = `<span id="results-count">${productCards.length}</span> produits correspondent à vos critères`;
+    filtersForm.appendChild(resultsCounter);
+    
+    // Créer le bouton reset
+    const resetButton = document.createElement('button');
+    resetButton.type = 'button';
+    resetButton.className = 'btn btn--ghost btn--small';
+    resetButton.textContent = 'Réinitialiser les filtres';
+    resetButton.style.display = 'none';
+    filtersForm.appendChild(resetButton);
+    
+    function updateResults() {
       const formData = new FormData(filtersForm);
       const budget = formData.get('budget');
       const usage = formData.get('usage');
-      
-      const productCards = document.querySelectorAll('.product-card');
+      let visibleCount = 0;
+      let hasActiveFilters = budget || usage;
       
       productCards.forEach(card => {
         let show = true;
         
-        // Budget filter
-        if (budget && budget !== '') {
-          const price = card.dataset.price;
-          if (price) {
-            const priceNum = parseInt(price);
-            switch (budget) {
-              case '-150':
-                show = show && priceNum < 150;
-                break;
-              case '150-300':
-                show = show && priceNum >= 150 && priceNum <= 300;
-                break;
-              case '+300':
-                show = show && priceNum > 300;
-                break;
-            }
-          }
+        // Filtre budget
+        if (budget && card.dataset.price) {
+          const price = parseInt(card.dataset.price);
+          if (budget === '-150' && price >= 150) show = false;
+          if (budget === '150-300' && (price < 150 || price > 300)) show = false;
+          if (budget === '+300' && price <= 300) show = false;
         }
         
-        // Usage filter
-        if (usage && usage !== '') {
-          const cardUsage = card.dataset.usage;
-          if (cardUsage) {
-            show = show && cardUsage.includes(usage);
-          }
+        // Filtre usage
+        if (usage && card.dataset.usage && card.dataset.usage !== usage) {
+          show = false;
         }
         
-        card.style.display = show ? 'flex' : 'none';
+        if (show) {
+          card.style.display = 'block';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+      
+      // Mettre à jour le compteur
+      const countElement = document.getElementById('results-count');
+      countElement.textContent = visibleCount;
+      
+      // Afficher/masquer le bouton reset
+      resetButton.style.display = hasActiveFilters ? 'inline-block' : 'none';
+    }
+    
+    // Event listeners
+    filtersForm.addEventListener('change', updateResults);
+    
+    resetButton.addEventListener('click', function() {
+      filtersForm.reset();
+      updateResults();
+    });
       });
     });
   }
