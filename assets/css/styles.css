@@ -941,6 +941,37 @@ a:hover {
   background-size: contain;
 }
 
+/* Comparatifs specific icons */
+.icon--podium {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffd700' viewBox='0 0 24 24'%3E%3Cpath d='M5 16L3 5l5.5 1L12 4l3.5 2L21 5l-2 11H5zm2.7-2h8.6l.9-5.4-2.1-.4L12 9.7 8.9 8.2l-2.1.4L7.7 14z'/%3E%3C/svg%3E") no-repeat center;
+  background-size: contain;
+}
+
+.icon--spine {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2328a745' viewBox='0 0 24 24'%3E%3Cpath d='M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z'/%3E%3C/svg%3E") no-repeat center;
+  background-size: contain;
+}
+
+.icon--gamepad {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%236f42c1' viewBox='0 0 24 24'%3E%3Cpath d='M6 9h2v2H6V9zm0 4h2v2H6v-2zm4-4h2v2h-2V9zm0 4h2v2h-2v-2zm4-4h2v2h-2V9zm0 4h2v2h-2v-2z'/%3E%3C/svg%3E") no-repeat center;
+  background-size: contain;
+}
+
+.icon--wallet {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2328a745' viewBox='0 0 24 24'%3E%3Cpath d='M21 7.28V5c0-1.1-.9-2-2-2H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-2.28c.59-.35 1-.98 1-1.72V9c0-.74-.41-1.37-1-1.72zM20 9v6h-7V9h7zM5 19V5h14v2h-6c-1.1 0-2 .9-2 2v6c0 1.1.9 2 2 2h6v2H5z'/%3E%3C/svg%3E") no-repeat center;
+  background-size: contain;
+}
+
+.icon--adjustable {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2317a2b8' viewBox='0 0 24 24'%3E%3Cpath d='M12 5.83L15.17 9l1.41-1.41L12 3 7.41 7.59 8.83 9 12 5.83zm0 12.34L8.83 15l-1.41 1.41L12 21l4.59-4.59L15.17 15 12 18.17z'/%3E%3C/svg%3E") no-repeat center;
+  background-size: contain;
+}
+
+.icon--medical {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23dc3545' viewBox='0 0 24 24'%3E%3Cpath d='M19 8h-2v3h-3v2h3v3h2v-3h3v-2h-3V8zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z'/%3E%3C/svg%3E") no-repeat center;
+  background-size: contain;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .nav__toggle {
