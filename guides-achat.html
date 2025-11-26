@@ -9,6 +9,28 @@
   <link rel="canonical" href="https://chaises-de-bureau.be/guides-achat.html">
   
   <link rel="stylesheet" href="/assets/css/styles.css">
+  
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Accueil",
+        "item": "https://chaises-de-bureau.be/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Guides d'achat",
+        "item": "https://chaises-de-bureau.be/guides-achat.html"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <header class="header">
@@ -30,6 +52,21 @@
     </div>
   </header>
 
+  <!-- Breadcrumbs -->
+  <nav class="breadcrumbs">
+    <div class="container">
+      <ol class="breadcrumbs__list">
+        <li class="breadcrumbs__item">
+          <a href="index.html" class="breadcrumbs__link">Accueil</a>
+          <span class="breadcrumbs__separator">›</span>
+        </li>
+        <li class="breadcrumbs__item">
+          <span class="breadcrumbs__current">Guides d'achat</span>
+        </li>
+      </ol>
+    </div>
+  </nav>
+
   <main class="main">
     <!-- Hero -->
     <section class="hero">
@@ -45,6 +82,72 @@
       </div>
     </section>
 
+    <!-- Quiz recommandation -->
+    <section class="section section--quiz">
+      <div class="container">
+        <h2>🎯 Quelle chaise pour vous ?</h2>
+        <p class="section__intro">Répondez à 5 questions pour obtenir une recommandation personnalisée</p>
+        
+        <div class="quiz" id="chair-quiz">
+          <div class="quiz__question active" data-question="1">
+            <h3>1. Combien d'heures par jour utilisez-vous votre chaise ?</h3>
+            <div class="quiz__options">
+              <button class="quiz__option" data-value="light">Moins de 4h/jour</button>
+              <button class="quiz__option" data-value="medium">4-6h/jour</button>
+              <button class="quiz__option" data-value="heavy">Plus de 6h/jour</button>
+            </div>
+          </div>
+          
+          <div class="quiz__question" data-question="2">
+            <h3>2. Quel est votre budget maximum ?</h3>
+            <div class="quiz__options">
+              <button class="quiz__option" data-value="budget">150-200€</button>
+              <button class="quiz__option" data-value="mid">200-350€</button>
+              <button class="quiz__option" data-value="premium">350€+</button>
+            </div>
+          </div>
+          
+          <div class="quiz__question" data-question="3">
+            <h3>3. Avez-vous des problèmes de dos ?</h3>
+            <div class="quiz__options">
+              <button class="quiz__option" data-value="yes">Oui, fréquents</button>
+              <button class="quiz__option" data-value="sometimes">Parfois</button>
+              <button class="quiz__option" data-value="no">Non, jamais</button>
+            </div>
+          </div>
+          
+          <div class="quiz__question" data-question="4">
+            <h3>4. Usage principal ?</h3>
+            <div class="quiz__options">
+              <button class="quiz__option" data-value="work">Travail/Bureau</button>
+              <button class="quiz__option" data-value="gaming">Gaming</button>
+              <button class="quiz__option" data-value="study">Études</button>
+            </div>
+          </div>
+          
+          <div class="quiz__question" data-question="5">
+            <h3>5. Votre taille ?</h3>
+            <div class="quiz__options">
+              <button class="quiz__option" data-value="small">Moins d'1m70</button>
+              <button class="quiz__option" data-value="average">1m70-1m85</button>
+              <button class="quiz__option" data-value="tall">Plus d'1m85</button>
+            </div>
+          </div>
+          
+          <div class="quiz__result" id="quiz-result" style="display: none;">
+            <h3>🎉 Votre recommandation personnalisée :</h3>
+            <div class="quiz__recommendation">
+              <div class="recommendation__content">
+                <h4 id="recommendation-title"></h4>
+                <p id="recommendation-text"></p>
+                <a id="recommendation-link" class="btn btn--primary">Voir les chaises recommandées</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Guides principaux -->
     <section class="section" id="guides">
       <div class="container">
@@ -53,45 +156,57 @@
         
         <div class="grid grid--products">
           <article class="path-card">
-            <div class="path-card__icon">📋</div>
+            <div class="path-card__icon">
+              <div class="icon icon--large icon--checklist"></div>
+            </div>
             <h3>Comment choisir sa chaise de bureau ?</h3>
             <p>Le guide complet : critères essentiels, réglages, matériaux, budget. Tout pour faire le bon choix.</p>
-            <a href="comment-choisir-chaise-de-bureau.html" class="btn btn--primary">Lire le guide</a>
+            <a href="index.html" class="btn btn--primary">Lire le guide complet</a>
           </article>
           
           <article class="path-card">
-            <div class="path-card__icon">⚠️</div>
+            <div class="path-card__icon">
+              <div class="icon icon--large icon--warning"></div>
+            </div>
             <h3>Les 7 erreurs qui détruisent votre dos</h3>
             <p>Évitez ces erreurs courantes dans le choix et l'utilisation de votre chaise de bureau.</p>
-            <a href="guides-achat.html#erreurs" class="btn btn--primary">Découvrir</a>
+            <a href="#erreurs" class="btn btn--primary">Découvrir les erreurs</a>
           </article>
           
           <article class="path-card">
-            <div class="path-card__icon">🆚</div>
+            <div class="path-card__icon">
+              <div class="icon icon--large icon--versus"></div>
+            </div>
             <h3>Chaise gaming vs chaise de bureau</h3>
             <p>Quelle différence ? Laquelle choisir selon votre usage ? Notre analyse complète.</p>
-            <a href="guides-achat.html#gaming-vs-bureau" class="btn btn--primary">Comparer</a>
+            <a href="chaises-gaming.html" class="btn btn--primary">Comparer gaming vs bureau</a>
           </article>
           
           <article class="path-card">
-            <div class="path-card__icon">⚙️</div>
+            <div class="path-card__icon">
+              <div class="icon icon--large icon--settings"></div>
+            </div>
             <h3>Régler correctement sa chaise de bureau</h3>
             <p>Guide étape par étape pour optimiser tous les réglages de votre chaise ergonomique.</p>
-            <a href="guides-achat.html#reglages" class="btn btn--primary">Apprendre</a>
+            <a href="#reglages" class="btn btn--primary">Apprendre les réglages</a>
           </article>
           
           <article class="path-card">
-            <div class="path-card__icon">🏠</div>
+            <div class="path-card__icon">
+              <div class="icon icon--large icon--home-office"></div>
+            </div>
             <h3>Aménager un bureau ergonomique à la maison</h3>
             <p>Télétravail : créez un espace de travail sain et productif chez vous.</p>
-            <a href="/guides-achat/amenager-un-bureau-ergonomique-a-la-maison/" class="btn btn--primary">Découvrir</a>
+            <a href="bureaux-assis-debout.html" class="btn btn--primary">Guide télétravail</a>
           </article>
           
           <article class="path-card">
-            <div class="path-card__icon">💰</div>
+            <div class="path-card__icon">
+              <div class="icon icon--large icon--wallet"></div>
+            </div>
             <h3>Chaises de bureau : quel budget prévoir ?</h3>
             <p>Analyse des prix par gamme et conseils pour optimiser votre investissement.</p>
-            <a href="/guides-achat/budget-chaise-de-bureau/" class="btn btn--primary">Voir le guide</a>
+            <a href="#budget" class="btn btn--primary">Guide budget détaillé</a>
           </article>
         </div>
       </div>
@@ -105,31 +220,39 @@
         
         <div class="grid grid--products">
           <article class="path-card">
-            <div class="path-card__icon">💼</div>
+            <div class="path-card__icon">
+              <div class="icon icon--large icon--briefcase"></div>
+            </div>
             <h3>Chaise pour télétravail</h3>
             <p>Spécial home office : critères, budget, aménagement de l'espace.</p>
-            <a href="/guides-achat/chaise-teletravail/" class="btn btn--ghost">Lire</a>
+            <a href="chaises-de-bureau.html" class="btn btn--ghost">Chaises télétravail</a>
           </article>
           
           <article class="path-card">
-            <div class="path-card__icon">🩺</div>
+            <div class="path-card__icon">
+              <div class="icon icon--large icon--medical"></div>
+            </div>
             <h3>Chaise pour mal de dos</h3>
             <p>Problèmes dorsaux : quelles chaises choisir, conseils préventifs.</p>
-            <a href="/guides-achat/chaise-mal-de-dos/" class="btn btn--ghost">Lire</a>
+            <a href="chaises-de-bureau.html" class="btn btn--ghost">Chaises ergonomiques</a>
           </article>
           
           <article class="path-card">
-            <div class="path-card__icon">👥</div>
+            <div class="path-card__icon">
+              <div class="icon icon--large icon--tall-person"></div>
+            </div>
             <h3>Chaise pour personne grande</h3>
             <p>Plus d'1m85 ? Critères spécifiques et modèles adaptés aux grandes tailles.</p>
-            <a href="/guides-achat/chaise-personne-grande/" class="btn btn--ghost">Lire</a>
+            <a href="chaises-de-bureau.html" class="btn btn--ghost">Chaises grandes tailles</a>
           </article>
           
           <article class="path-card">
-            <div class="path-card__icon">🎓</div>
+            <div class="path-card__icon">
+              <div class="icon icon--large icon--student"></div>
+            </div>
             <h3>Chaise pour étudiant</h3>
             <p>Budget serré, longues heures d'étude : nos recommandations étudiantes.</p>
-            <a href="/guides-achat/chaise-etudiant/" class="btn btn--ghost">Lire</a>
+            <a href="chaises-de-bureau.html" class="btn btn--ghost">Chaises étudiants</a>
           </article>
         </div>
       </div>
@@ -159,16 +282,50 @@
         </ol>
         
         <h3>Checklist avant achat</h3>
-        <ul>
-          <li>✅ Support lombaire réglable (hauteur minimum)</li>
-          <li>✅ Hauteur d'assise ajustable</li>
-          <li>✅ Accoudoirs réglables (hauteur minimum)</li>
-          <li>✅ Mécanisme d'inclinaison fonctionnel</li>
-          <li>✅ Base 5 branches stable</li>
-          <li>✅ Garantie minimum 2 ans</li>
-          <li>✅ Avis clients positifs (>4/5)</li>
-          <li>✅ Dimensions adaptées à votre morphologie</li>
-        </ul>
+        <div class="checklist">
+          <div class="checklist__item">
+            <span class="checklist__icon">✅</span>
+            <span class="checklist__text"><strong>Support lombaire réglable</strong> (hauteur minimum) - <a href="chaises-de-bureau.html">Voir chaises ergonomiques</a></span>
+          </div>
+          <div class="checklist__item">
+            <span class="checklist__icon">✅</span>
+            <span class="checklist__text"><strong>Hauteur d'assise ajustable</strong> - Essentiel pour tous</span>
+          </div>
+          <div class="checklist__item">
+            <span class="checklist__icon">✅</span>
+            <span class="checklist__text"><strong>Accoudoirs réglables</strong> (hauteur minimum) - <a href="chaises-de-bureau.html">Voir modèles avec accoudoirs 4D</a></span>
+          </div>
+          <div class="checklist__item">
+            <span class="checklist__icon">✅</span>
+            <span class="checklist__text"><strong>Mécanisme d'inclinaison fonctionnel</strong> - Pour le confort</span>
+          </div>
+          <div class="checklist__item">
+            <span class="checklist__icon">✅</span>
+            <span class="checklist__text"><strong>Base 5 branches stable</strong> - Sécurité obligatoire</span>
+          </div>
+          <div class="checklist__item">
+            <span class="checklist__icon">✅</span>
+            <span class="checklist__text"><strong>Garantie minimum 2 ans</strong> - Gage de qualité</span>
+          </div>
+          <div class="checklist__item">
+            <span class="checklist__icon">✅</span>
+            <span class="checklist__text"><strong>Avis clients positifs (>4/5)</strong> - Validation terrain</span>
+          </div>
+          <div class="checklist__item">
+            <span class="checklist__icon">✅</span>
+            <span class="checklist__text"><strong>Dimensions adaptées à votre morphologie</strong> - Crucial pour le confort</span>
+          </div>
+        </div>
+        
+        <div class="download-cta">
+          <h4>📄 Téléchargez cette checklist en PDF</h4>
+          <p>Recevez la checklist complète + guide des 7 erreurs à éviter directement par email</p>
+          <form class="download-form">
+            <input type="email" placeholder="Votre adresse email" required>
+            <button type="submit" class="btn btn--primary">Télécharger gratuitement</button>
+          </form>
+          <p class="download-note">🔒 Pas de spam • ✉️ Guide PDF immédiat • 📧 Newsletter optionnelle</p>
+        </div>
         
         <h3>Signaux d'alarme à éviter</h3>
         <ul>
@@ -186,7 +343,7 @@
 
   <footer class="footer">
     <div class="container footer__inner">
-      <p>&copy; 2025 chaises-de-bureau.be – Guide indépendant. En tant que Partenaire Amazon, nous réalisons un bénéfice sur les achats remplissant les conditions requises.</p>
+      <p>&copy; 2026 chaises-de-bureau.be – Guide indépendant. En tant que Partenaire Amazon, nous réalisons un bénéfice sur les achats remplissant les conditions requises.</p>
       <nav class="footer__nav">
         <a href="a-propos.html">À propos</a>
         <a href="mentions-legales.html">Mentions légales</a>
